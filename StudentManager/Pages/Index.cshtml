@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <h1 class="display-4">Add Student</h1>
+    <form method="post">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <label asp-for="Student.Name"></label>
+                    <input class="form-control" asp-for="Student.Name" />
+                    <span class="text-danger mt-1" asp-validation-for="Student.Name"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div >
+                    <label asp-for="Student.Family"></label>
+                    <input class="form-control" asp-for="Student.Family" />
+                     <span class="text-danger mt-1" asp-validation-for="Student.Family"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <label asp-for="Student.Age"></label>
+                    <input class="form-control" asp-for="Student.Age" />
+                     <span class="text-danger mt-1" asp-validation-for="Student.Age"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-4">
+                    <label>
+                        Mail
+                        <input type="radio" asp-for="Student.Gender" value="1" />
+                    </label>
+                    <label>
+                        Femail
+                        <input type="radio" asp-for="Student.Gender" value="2" />
+                    </label>
+                     <span class="text-danger mt-1" asp-validation-for="Student.Gender"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-outline-warning" type="reset">Reset</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"/>
+}

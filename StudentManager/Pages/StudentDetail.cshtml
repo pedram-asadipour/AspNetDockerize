@@ -1,0 +1,12 @@
+﻿@page
+@model StudentManager.Pages.StudentDetailModel
+@{
+}
+
+
+<div class="row">
+    <label>Name : @Model.Student.Name</label>
+    <label>Family : @Model.Student.Family</label>
+    <label>Age : @Model.Student.Age</label>
+    <label>Gender : @(Model.Student.Gender == 1 ? "Mail" : "Femail")</label>
+</div>
